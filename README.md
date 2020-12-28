@@ -155,3 +155,41 @@ Sci-Fi appears to be the highest rated genre in the age group of U18 for both ma
 ### US vs non-US Cross Analysis:
 The dataset contains both the US and non-US movies. Let's analyse how both the US and the non-US voters have responded to the US and the non-US movies.
 
+  - We will create a column IFUS in the dataframe movies. The column IFUS should contain the value "USA" if the Country of the movie is "USA". For all other countries other than     the USA, IFUS should contain the value non-USA.
+  - Now we will make a boxplot that shows how the number of votes from the US people i.e. CVotesUS is varying for the US and non-US movies. We will make use of the column IFUS       to make this plot. Similarly, we will make another subplot that shows how non US voters have voted for the US and non-US movies by plotting CVotesnUS for both the US and         non-US movies.
+  - Again we will do a similar analysis but with the ratings. We will make a boxplot that shows how the ratings from the US people i.e. VotesUS is varying for the US and non-US     movies. Similarly, we will make another subplot that shows how VotesnUS is varying for the US and non-US movies.
+
+### Box plot - 1: CVotesUS(y) vs IFUS(x):
+
+![Capture](https://user-images.githubusercontent.com/59309459/103194959-3ce26200-4907-11eb-8e65-017cf4d6f7a7.JPG)
+
+## Inferences:
+
+  - Inference 1: In general US movies have got a high number of votes from both the US and non-US voters when we compare the medians of box plots.
+  - Inference 2: Non-US movies have a more uniform distribution of the number of votes as compared to the US movies, which is evident from the values of the quartiles.
+  
+### Box plot - 2: VotesUS(y) vs IFUS(x):
+
+![Capture](https://user-images.githubusercontent.com/59309459/103195047-761ad200-4907-11eb-8c17-599f78624b5c.JPG)
+
+## Inferences:
+
+  - Inference 1: Non-US voters have rated both the US and non-US movies lower as compared to the US voters, which is evident from the medians.
+  - Inference 2: US movies have received higher ratings from US voters.
+  - Inference 3: Some US movies have got exceptionally high ratings from both the US and non-US voters. There are no such extreme ratings for any of the non-US movies.
+  
+### Top 1000 Voters Vs Genres:
+
+We have also observed the column CVotes1000. This column represents the top 1000 voters on IMDb and gives the count for the number of these voters who have voted for a particular movie. Let's see how these top 1000 voters have voted across the genres.
+
+  - We will sort the dataframe genre_top10 based on the value of CVotes1000in a descending order.
+  - We will make a seaborn barplot for genre vs CVotes1000.
+  
+### Barplot for CVotes1000 according to Genre:
+
+![Capture](https://user-images.githubusercontent.com/59309459/103195176-c2fea880-4907-11eb-95d2-add798dcc16b.JPG)
+
+## Inferences:
+
+  - Inference 1: The voting pattern her almost resembles the pattern in age group vs genre heat maps.
+  - Inference 2: Although drama genre has the highest number of movies, the average number of top users who have rated it is less as compared to other genres which have lesser       number of movies in them.
